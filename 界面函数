@@ -1,1 +1,70 @@
-# -
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <windows.h>
+typedef struct person
+{
+char id[20];
+char name[20];
+int age;
+char sex[3];
+char phone[20];
+char address[20];
+float money;
+char education[20];//学历
+char post[20];//职务
+};*/
+/*void employee_Menu()
+{
+while(1)
+{
+//clean();
+int choose;
+menu();
+switch(scanf("%d",&choose))
+{
+case 1: inquire(); break;
+case 2: print(); break;
+case 3: revise(); break;
+case 4: exit;
+}
+printf("操作完成，请按0返回菜单，按4退出系统:\n");
+int flag;
+scanf("%d",&flag);
+if( flag != 0)
+{
+break;
+}
+}
+
+}
+void admtor_Secret()
+{
+char secret[10]="wd857432";
+int n=2;
+while(1)
+{
+char card[10];
+printf("请输入你的管理员密码:");
+scanf("%s",card);
+if(strcmp(secret,card))
+{
+admtor_menu();
+}
+else
+{
+//clean();
+if(n==2||n==1)
+{
+printf("你的管理员密码输入错误请重试，你还有%d次机会\n",n);
+}
+if(n==0)
+{
+printf("错误次数过多，请退出重试\n");
+break;
+}
+n--;
+}
+}
+
+}
