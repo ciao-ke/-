@@ -1,1 +1,19 @@
-# -
+void menu()
+{
+	printf(" 1.查询个人信息                  \n");
+	printf(" 2.打印工资条                \n");
+	printf(" 3.修改信息申请                 \n");
+	printf(" 4.退出系统				   \n"); 
+}
+void menu1()
+{
+	printf("                                                       1.查询个人信息                  \n");
+	printf("                                                       2.打印工资条                \n");
+	printf("                                                       3.插入职员信息                  \n");
+	printf("                                                       4.职员信息统计              \n");
+	printf("                                                       5.删除职员信息                  \n");
+	printf("                                                       6.查询职员信息                  \n");
+	printf("                                                       7.新增职员信息                  \n");
+	printf("                                                       8.同意职员修改申请              \n");
+	printf("                                                       9.退出系统              \n");
+}
