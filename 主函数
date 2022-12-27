@@ -1,5 +1,48 @@
-#include <Stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
+int card;
+typedef struct person
+{
+	char id[20];
+	char name[20];
+	int age;
+	char sex[3];
+	char phone[20];
+	char address[20];
+	float money;
+	char education[20];//学历 
+	char post[20];//职务 
+};
 int main()
 {
-  你是sb
-}
+	printf("					欢迎进入迪公司个人信息系统\n"); 
+	while(1)
+	{
+	printf("请输入你的职工号：");
+	char n[20];
+	scanf("%s",&n); 
+	if(strcmp(card , n))
+	{
+				
+				}
+	else
+	{
+		int i=2; 
+		printf("你的职工号输入错误请重试，你还有%d次机会\n",i);
+		printf("请输入你的职工号:"); 
+		if(i--==0)
+		{
+		 exit;
+		}
+	}
+	}
+			
+			
+			
+			
+			
+	
+				return 0;
+			}
+				
+		
