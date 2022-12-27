@@ -1,48 +1,110 @@
-#include <stdio.h>
-#include <stdlib.h>
-int card;
-typedef struct person
-{
-	char id[20];
-	char name[20];
-	int age;
-	char sex[3];
-	char phone[20];
-	char address[20];
-	float money;
-	char education[20];//学历 
-	char post[20];//职务 
-};
 int main()
 {
 	printf("					欢迎进入迪公司个人信息系统\n"); 
+	int i=2;
+	void menu();
 	while(1)
 	{
-	printf("请输入你的职工号：");
-	char n[20];
-	scanf("%s",&n); 
-	if(strcmp(card , n))
+		printf("请输入你的职员号：");
+		char c[20];
+		scanf("%s",c); 
+if  (strcmp( "123", c)==0) 
 	{
-				
-				}
-	else
-	{
-		int i=2; 
-		printf("你的职工号输入错误请重试，你还有%d次机会\n",i);
-		printf("请输入你的职工号:"); 
-		if(i--==0)
+		while(1)
 		{
-		 exit;
+		system("cls");
+		int choose;
+		menu();	
+		switch(scanf("%d",&choose))
+		{
+	 		 case 1: /*inquire()*/; break;
+			 case 2: /*print()*/; break;
+			 case 3: /*revise()*/; break;
+			 case 4: exit;
+		}
+		system("cls");
+		printf("\n操作完成，请按0返回菜单，按4退出系统:\n");
+		int flag;
+		scanf("%d",&flag); 
+		if( flag != 0)
+		{
+			break; 
+		}
+		}
+		break;
+	}
+if	(strcmp("456",c)==0)
+	{
+		char secret[10]="wd857432";
+		int n=2;
+		while(1)
+		{
+		char card[10]; 
+		printf("请输入你的管理员密码:"); 
+		scanf("%s",card);
+		if(strcmp(secret,card)==0)
+		{
+			while(1)
+			{ 
+			system("cls");
+				menu1();
+				int a;
+				switch(scanf("%d",&a))
+				{
+					case 1:/*inquire();*/break;
+					case 2:/*print();*/break;
+					case 3:/*insert();*/break;
+					case 4:/*total();*/break;
+					case 5:/*delete();*/break;
+					case 6:/*search();*/break;
+					case 7:/*add();*/break;
+					case 8:/*agree();*/break;
+					case 9:exit;
+				}
+				system("cls");
+			printf("\n操作完成，请按0返回菜单，按9退出系统:\n");
+			int flag;
+			scanf("%d",&flag); 
+			if( flag != 0)
+			{
+				break; 
+			}
+				}
+		break;
+	}
+				
+else
+		{
+		system("cls");
+		if(n==2||n==1)
+		{
+			printf("你的管理员密码输入错误请重试，你还有%d次机会\n",n);
+		}
+		if(n==0)
+		{
+			printf("错误次数过多，请退出重试\n"); 
+		 break;
+		}
+		n--;
 		}
 	}
+		break;
 	}
-			
-			
-			
-			
-			
-	
+		
+else
+	{
+		//clean();
+		if(i==2||i==1)
+		{
+			printf("你的职工号输入错误请重试，你还有%d次机会\n",i);
+		}
+		if(i==0)
+		{
+			printf("错误次数过多，请退出重试\n"); 
+		 break;
+		}
+		i--;
+	}
+	}
 				return 0;
 			}
-				
-		
