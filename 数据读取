@@ -1,0 +1,70 @@
+typedef struct person
+{
+	char id[20];
+	char name[20];
+	char sex[3];
+	int age;
+	char phone[20];
+	float money;
+	char post[20];//职务 
+}user;
+typedef struct person
+{
+	char id[20];
+	char name[20];
+	int age;
+	char sex[3];
+	char phone[20];
+	float money;
+	char education[20];//学历 
+	char post[20];//职务 
+}p;
+
+void User_read( user**gm)
+{
+	int i=0,j;
+	user gm[100];
+	FILE *fp;
+	if(!(fp=fopen("E:\管理层数据.txt","r")))			// 打开文件并且让fp指向 文件 
+	{
+		printf("Can not open file\n");
+		exit(1);
+	}
+	
+	while(!feof(fp))                     //读取一组数据后指针指向下一组数据，并且判断是否指向最后一行 
+	{ 
+		fscanf(fp,"%[^,],%[^,],%[^,],%d,%[^,],%f,%[^]",&gm[i].id,&gm[i].name,&gm[i].sex,&gm[i].age,&gm[i].phone,&gm[i].money,&gm[i].post);
+		i++;
+	}             //%[^,]  字符串以，为结束标志 
+	j=i;
+	for(i=0;i<j;i++)
+	{
+		printf("%s,%s,%s,%d,%,%f,%s\n",&gm[i].id,&gm[i].name,&gm[i].sex,&gm[i].age,&gm[i].phone,&gm[i].money,&gm[i].post);
+	}
+	
+	fclose(fp);				//关闭文件； 
+}
+void P_read(p**em)
+{
+int i=0,j;
+	user gm[100];
+	FILE *fp;
+	if(!(fp=fopen("E:\管理层数据.txt","r")))			// 打开文件并且让fp指向 文件 
+	{
+		printf("Can not open file\n");
+		exit(1);
+	}
+	
+	while(!feof(fp))                     //读取一组数据后指针指向下一组数据，并且判断是否指向最后一行 
+	{ 
+		fscanf(fp,"%[^,],%[^,],%[^,],%d,%[^,],%f,%[^]",&gm[i].id,&gm[i].name,&gm[i].sex,&gm[i].age,&gm[i].phone,&gm[i].money,&gm[i].post);
+		i++;
+	}             //%[^,]  字符串以，为结束标志 
+	j=i;
+	for(i=0;i<j;i++)
+	{
+		printf("%s,%s,%s,%d,%,%f,%s\n",&gm[i].id,&gm[i].name,&gm[i].sex,&gm[i].age,&gm[i].phone,&gm[i].money,&gm[i].post);
+	}
+	
+	fclose(fp);				//关闭文件； 
+  }
