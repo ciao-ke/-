@@ -1,0 +1,40 @@
+p** search(int way, p** arr, p** back)
+{
+	int n = 0;
+	char check[20] = { 0 };
+	switch (way)
+	{
+	case 1:
+	{
+		int key = 0;
+		printf("请输入所查询职工号：");
+		nouse = scanf("%s", check);
+		for (int i = 0; i < 1000; i++)
+			if (arr[i] != NULL && strcmp(arr[i]->id, check) == 0)
+			{
+				back[0] = arr[i];
+				break;
+			}
+		break;
+	}
+	case 2:
+	{
+		printf("请输入所查询姓名：");
+		nouse = scanf("%s", check);
+		for (int i = 0; i < 1000; i++)
+			if (arr[i] != NULL && strcmp(arr[i]->name, check) == 0)
+				back[n++] = arr[i];
+		break;
+	}
+	case 3:
+	{
+		for (int i = 0; i < 1000; i++)
+			if (arr[i] != NULL && arr[i]->basic < 1000)
+			{
+				back[n++] = arr[i];
+			}
+		break;
+	}
+	}
+	return back;
+}
